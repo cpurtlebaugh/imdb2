@@ -1,20 +1,29 @@
+<<<<<<< HEAD
 User.destroy_all
 Actor.destroy_all
 Movie.destroy_all
 Review.destroy_all
+=======
+# ActiveRecord::Base.transaction do
+
+  User.destroy_all
+  Movie.destroy_all
+  Actor.destroy_all
+  Review.destroy_all
+>>>>>>> origin/master
 
   # Users
   brooks = User.create(
     first_name: 'Brooks',
-    last_name: 'Swinnerton',
+    last_name: 'Swinnerton'
   )
   otto = User.create(
     first_name: 'Otto',
-    last_name: 'Swinnerton',
+    last_name: 'Swinnerton'
   )
   luna = User.create(
     first_name: 'Luna',
-    last_name: 'Swinnerton',
+    last_name: 'Swinnerton'
   )
 
   # Actors
@@ -91,3 +100,7 @@ Review.destroy_all
   )
 
   puts 'Successfully added seed data'
+<<<<<<< HEAD
+=======
+# end
+>>>>>>> origin/master
