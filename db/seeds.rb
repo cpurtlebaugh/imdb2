@@ -1,16 +1,22 @@
-ActiveRecord::Base.transaction do
+# ActiveRecord::Base.transaction do
+
+  User.destroy_all
+  Movie.destroy_all
+  Actor.destroy_all
+  Review.destroy_all
+
   # Users
   brooks = User.create(
     first_name: 'Brooks',
-    last_name: 'Swinnerton',
+    last_name: 'Swinnerton'
   )
   otto = User.create(
     first_name: 'Otto',
-    last_name: 'Swinnerton',
+    last_name: 'Swinnerton'
   )
   luna = User.create(
     first_name: 'Luna',
-    last_name: 'Swinnerton',
+    last_name: 'Swinnerton'
   )
 
   # Actors
@@ -86,4 +92,4 @@ ActiveRecord::Base.transaction do
   )
 
   puts 'Successfully added seed data'
-end
+# end
