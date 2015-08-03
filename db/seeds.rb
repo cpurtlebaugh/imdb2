@@ -1,4 +1,8 @@
-ActiveRecord::Base.transaction do
+User.destroy_all
+Actor.destroy_all
+Movie.destroy_all
+Review.destroy_all
+
   # Users
   brooks = User.create(
     first_name: 'Brooks',
@@ -14,35 +18,36 @@ ActiveRecord::Base.transaction do
   )
 
   # Actors
+
   ralph_fiennes = Actor.create(
     name: 'Ralph Fiennes',
     year_of_birth: 1962,
-    thumbnail: 'ralph_fiennes.jpg'
+    thumbnail: 'ralph_fiennes.jpg',
   )
   jeff_goldblum = Actor.create(
     name: 'Jeff Goldblum',
     year_of_birth: 1952,
-    thumbnail: 'jeff_goldblum.jpg'
+    thumbnail: 'jeff_goldblum.jpg',
   )
   will_ferrel = Actor.create(
     name: 'Will Ferrell',
     year_of_birth: 1967,
-    thumbnail: 'will_ferrel.jpg'
+    thumbnail: 'will_ferrel.jpg',
   )
   chris_kattan = Actor.create(
     name: 'Chris Kattan',
     year_of_birth: 1970,
-    thumbnail: 'chris_kattan.jpg'
+    thumbnail: 'chris_kattan.jpg',
   )
   zach_braff = Actor.create(
     name: 'Zach Braff',
     year_of_birth: 1975,
-    thumbnail: 'zach_braff.jpg'
+    thumbnail: 'zach_braff.jpg',
   )
   kate_hudson = Actor.create(
     name: 'Kate Hudson',
     year_of_birth: 1979,
-    thumbnail: 'kate_hudson.jpg'
+    thumbnail: 'kate_hudson.jpg',
   )
 
   # Movies
@@ -86,4 +91,3 @@ ActiveRecord::Base.transaction do
   )
 
   puts 'Successfully added seed data'
-end
