@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-User.destroy_all
-Actor.destroy_all
-Movie.destroy_all
-Review.destroy_all
-=======
 # ActiveRecord::Base.transaction do
 
   User.destroy_all
   Movie.destroy_all
   Actor.destroy_all
   Review.destroy_all
->>>>>>> origin/master
 
   # Users
   brooks = User.create(
