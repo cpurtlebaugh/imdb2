@@ -5,6 +5,7 @@ class ActorsController < ApplicationController
   end
 
   def show
+    @actor = Actor.find(params[:id])
   end
 
   def new
@@ -14,7 +15,7 @@ class ActorsController < ApplicationController
   def create
     @actor = Actor.new(actor_params)
     if @actor.save
-      redirect_to '/actors/index'
+      redirect_to actor_path(@actor)
     else
       render 'new'
     end
